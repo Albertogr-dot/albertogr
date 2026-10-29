@@ -1,0 +1,315 @@
+/* ========================================
+   ESTILOS GENERALES
+   ======================================== */
+
+body {
+    background-image:
+            linear-gradient(rgba(16, 16, 16, 0.65), rgba(16, 16, 16, 0.65)),
+            url("img/fondo-inicio-codigo-picado.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #f5f5f5;
+    max-width: 800px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #b0b0b0;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: whitesmoke;
+    font-size: 40px;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+main {
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+span {
+    color: #c9a77c;
+}
+
+header img {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    padding: 2px;
+    margin-top: 30px;
+    color: #c9a77c;
+    font-size: 25px;
+}
+
+
+/* ========================================
+   PORTADA — INDEX.HTML
+   ======================================== */
+
+#inicio {
+    text-align: center;
+}
+
+#inicio h2 {
+    color: whitesmoke;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#inicio p {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Enlaces de la portada */
+
+.navegacion-inicio {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.navegacion-inicio a {
+    color: #c9a77c;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.navegacion-inicio a:hover {
+    color: #ffffff;
+}
+
+
+/* Secciones de la portada */
+
+#sobre-mi,
+#proyectos,
+#contacto {
+    text-align: left;
+}
+
+#sobre-mi h2,
+#proyectos h2,
+#contacto h2 {
+    color: burlywood;
+    font-size: 20px;
+    padding: 10px;
+    margin: 20px auto 0;
+    text-align: left;
+}
+
+#sobre-mi p,
+#proyectos p {
+    margin-top: 1px;
+    margin-left: 0;
+    text-align: left;
+}
+
+#contacto p {
+    margin-top: 0;
+    margin-left: 0;
+    text-align: left;
+}
+
+#contacto img {
+    width: 80px;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+#contacto img:hover {
+    transform: scale(1.1);
+}
+
+#proyectos a,
+#sobre-mi a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ========================================
+   PÁGINA PROYECTOS
+   ======================================== */
+
+/* Tarjeta Ruta-Europa */
+
+.tarjeta-rutaeuropa {
+    background-color: rgba(16, 16, 16, 0.75);
+    background-image:
+            linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)),
+            url("img/paris.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 1px solid #c9a77c;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+/* Tarjeta MOBIX */
+
+.tarjeta-mobix {
+    background-color: rgba(16, 16, 16, 0.75);
+    background-image:
+            linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)),
+            url("img/mobix.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 1px solid #c9a77c;
+    padding: 25px;
+}
+
+/* Títulos de los proyectos */
+
+.tarjeta-rutaeuropa h3,
+.tarjeta-mobix h3 {
+    color: #72B6A1;
+}
+
+/* Enlaces de ambas tarjetas */
+
+.tarjeta-rutaeuropa a,
+.tarjeta-rutaeuropa a:visited,
+.tarjeta-mobix a,
+.tarjeta-mobix a:visited {
+    color: #c9a77c;
+    text-decoration: none;
+}
+
+.tarjeta-rutaeuropa a:hover,
+.tarjeta-mobix a:hover {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   PÁGINA SOBRE MÍ
+   ======================================== */
+
+body.pagina-sobre-mi {
+    max-width: 1000px;
+}
+
+body.pagina-sobre-mi main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Título principal y presentación */
+
+body.pagina-sobre-mi main > h2,
+body.pagina-sobre-mi main > p {
+    grid-column: 1 / -1;
+}
+
+body.pagina-sobre-mi main > h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+body.pagina-sobre-mi main > p {
+    margin: 0 auto 15px;
+}
+
+/* Tarjetas personales */
+
+body.pagina-sobre-mi main > section {
+    border: 1px solid #665642;
+    border-radius: 8px;
+    padding: 30px 20px;
+    background-color: rgba(16, 16, 16, 0.75);
+}
+
+body.pagina-sobre-mi main > section h3 {
+    color: #72B6A1;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+body.pagina-sobre-mi main > section p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+
+/* ========================================
+   ADAPTACIÓN A MÓVILES
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    header img {
+        width: 280px;
+    }
+
+    #inicio h2 {
+        font-size: 32px;
+    }
+
+    body.pagina-sobre-mi main {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    body.pagina-sobre-mi main > h2 {
+        font-size: 32px;
+    }
+
+    .tarjeta-rutaeuropa,
+    .tarjeta-mobix {
+        padding: 18px;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+}

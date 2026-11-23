@@ -1,0 +1,194 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ventas | MiStock</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- MENÚ LATERAL -->
+<aside>
+  <h2>MiStock</h2>
+
+  <nav>
+    <a href="index.html" class="menu">Resumen</a>
+    <a href="productos.html" class="menu">Productos</a>
+    <a href="ventas.html" class="menu active">Ventas</a>
+  </nav>
+</aside>
+
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+
+  <header>
+    <h1>Ventas</h1>
+    <p>Registra y consulta las ventas de tu inventario</p>
+  </header>
+
+
+  <!-- ACCIONES -->
+  <section class="acciones-productos">
+
+    <button type="button" id="btn-nueva-venta">
+      Registrar venta
+    </button>
+
+    <input
+      type="search"
+      id="buscador-ventas"
+      placeholder="Buscar ventas..."
+      aria-label="Buscar ventas"
+    >
+
+  </section>
+
+
+  <!-- FORMULARIO DE NUEVA VENTA -->
+  <section
+    class="formulario-producto"
+    id="formulario-venta"
+    hidden
+  >
+
+    <h3 id="titulo-formulario-venta">Nueva venta</h3>
+
+    <label for="producto-venta">
+      Producto
+    </label>
+
+    <select id="producto-venta" required>
+      <option value="">Selecciona un producto</option>
+    </select>
+
+
+    <label for="cantidad-venta">
+      Cantidad vendida
+    </label>
+
+    <input
+      type="number"
+      id="cantidad-venta"
+      placeholder="Ej. 2"
+      min="1"
+      step="1"
+      required
+    >
+
+
+    <label for="precio-venta">
+      Precio por unidad (€)
+    </label>
+
+    <input
+      type="number"
+      id="precio-venta"
+      placeholder="Ej. 15"
+      min="0"
+      step="0.01"
+      required
+    >
+
+
+    <label for="fecha-venta">
+      Fecha de la venta
+    </label>
+
+    <input
+      type="date"
+      id="fecha-venta"
+      required
+    >
+
+
+    <label for="cliente-venta">
+      Cliente (opcional)
+    </label>
+
+    <input
+      type="text"
+      id="cliente-venta"
+      placeholder="Nombre del cliente"
+      maxlength="100"
+    >
+
+
+    <div class="botones-formulario">
+
+      <button type="button" id="guardar-venta">
+        Guardar venta
+      </button>
+
+      <button type="button" id="cancelar-venta">
+        Cancelar
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- RESUMEN DE VENTAS -->
+  <section class="tarjetas-dashboard">
+
+    <article class="tarjeta">
+      <h3>Ventas totales</h3>
+      <p id="total-ventas">0</p>
+    </article>
+
+    <article class="tarjeta">
+      <h3>Ingresos totales</h3>
+      <p id="ingresos-ventas">0,00 €</p>
+    </article>
+
+  </section>
+
+
+  <!-- TABLA DE VENTAS -->
+  <section class="tabla-productos">
+
+    <h3>Historial de ventas</h3>
+
+    <div class="contenedor-tabla">
+
+      <table>
+
+        <thead>
+        <tr>
+          <th>FECHA</th>
+          <th>PRODUCTO</th>
+          <th>CANTIDAD</th>
+          <th>PRECIO UNIDAD</th>
+          <th>TOTAL</th>
+          <th>CLIENTE</th>
+          <th>ACCIONES</th>
+        </tr>
+        </thead>
+
+        <tbody id="lista-ventas">
+        <!-- Las ventas se mostrarán aquí mediante JavaScript -->
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <p
+      id="mensaje-sin-ventas"
+      class="mensaje-vacio"
+    >
+      Todavía no tienes ventas registradas.
+    </p>
+
+  </section>
+
+</main>
+
+<script src="js/ventas.js"></script>
+
+</body>
+</html>

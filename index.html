@@ -1,52 +1,145 @@
-<!DOCTYPE html>
-<html lang="es">
+
+<!doctype html>
+<html class="no-js" lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>albertogr.es — Desarrollo web</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MiStock | Resumen</title>
+
+  <meta name="description" content="Panel de gestión de inventario y ventas de MiStock">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
 
-<header>
-    <img src="img/AG-LOGO.png" alt="AG — Desarrollo web">
-</header>
+<aside>
+
+  <h1>MiStock</h1>
+
+  <nav>
+    <a href="index.html" class="menu active">Resumen</a>
+    <a href="productos.html" class="menu">Productos</a>
+    <a href="ventas.html" class="menu">Ventas</a>
+  </nav>
+
+</aside>
+
 
 <main>
 
-    <section id="inicio">
-        <h2>NO ES SOLO CÓDIGO</h2>
-        <p>APRENDIENDO A <span>CONSTRUIR IDEAS.</span></p>
-    </section>
+  <header>
 
-    <section id="sobre-mi">
-        <a href="sobre-mi.html">
-            <h2>Sobre mí</h2>
-        </a>
-        <p>Estoy aprendiendo desarrollo web y construyendo
-            mi camino a través de proyectos propios.</p>
-    </section>
+    <h2>Resumen</h2>
+    <p>Resumen general de tu inventario y actividad de ventas</p>
 
-    <section id="proyectos">
-        <a href="proyectos.html">
-            <h2>Proyectos</h2>
-        </a>
-        <p>Ideas que poco a poco se convierten en proyectos.</p>
-    </section>
+  </header>
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>
-            <a href="https://wa.me/34603178101">
-                <img src="img/logo-whatsapp-2.webp"
-                     alt="Contactar por WhatsApp">
-            </a>
-        </p>
-    </section>
+
+  <section class="tarjetas-dashboard">
+
+    <article class="tarjeta">
+
+      <h3>Productos en inventario</h3>
+      <p>128</p>
+      <p>Productos registrados</p>
+
+    </article>
+
+
+    <article class="tarjeta">
+
+      <h3>Ventas del mes</h3>
+      <p>45</p>
+      <p>Ventas realizadas</p>
+
+    </article>
+
+
+    <article class="tarjeta">
+
+      <h3>Stock bajo</h3>
+      <p>8</p>
+      <p>Productos con stock bajo</p>
+
+    </article>
+
+
+    <article class="tarjeta">
+
+      <h3>Productos agotados</h3>
+      <p>3</p>
+      <p>Productos agotados</p>
+
+    </article>
+
+  </section>
+
+
+
+  <section class="ventas-recientes">
+
+    <h3>Últimas ventas</h3>
+
+    <div class="tabla-ventas">
+
+      <table>
+
+        <thead>
+
+        <tr>
+          <th>Fecha</th>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th>Total</th>
+        </tr>
+
+        </thead>
+
+
+        <tbody>
+
+        <tr>
+          <td>02/11/2026</td>
+          <td>Camiseta básica</td>
+          <td>2</td>
+          <td>15 euros</td>
+          <td>30 euros</td>
+        </tr>
+
+
+        <tr>
+          <td>03/11/2026</td>
+          <td>Pantalón vaquero</td>
+          <td>1</td>
+          <td>25 euros</td>
+          <td>25 euros</td>
+        </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </section>
+
 
 </main>
 
 
+<script src="js/app.js"></script>
+
 </body>
+
 </html>
